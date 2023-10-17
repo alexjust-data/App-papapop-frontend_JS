@@ -5,173 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User page</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <style>
-        @font-face {
-            font-family: 'Wallie-Fit';  
-            src: url('assets/fonts/Wallie-Fit.woff2') format('woff2'),  
-            url('assets/fonts/Wallie-Fit.woff') format('woff'),  
-            url('assets/fonts/Wallie-Fit.ttf') format('truetype');
-            font-weight: normal; 
-            font-style: normal;
-        }
-
-        body {
-            font-family: 'Wallie-Fit', sans-serif;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            background-color: white;
-            padding: 20px;
-            padding-left: 70px;
-            padding-right: 70px;
-
-        }
-
-        .busqueda {
-            border: 1px solid gray;
-            padding: 10px; /* Hacemos el buscador más fino */
-            border-radius: 25px;
-        }
-
-        header .logo {
-            height: 40px; /* Reducimos el tamaño de los iconos */
-        }
-
-        header img {
-            height: 20px; /* Reducimos el tamaño de los iconos */
-        }
-
-        .iconos-header img {
-            margin-left: 10px; /* Ajusta este valor según tu preferencia */
-        }
-
-        header .iconos-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        header .boton-subir-producto {
-            background-color: #35c9b0c2; /* Verde turquesa */
-            border: none;
-            border-radius: 50px; /* Lados totalmente redondeados */
-            color: white;
-            padding: 1px 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            padding-left: 5px;   /* Puedes ajustar este valor según cuán pegado quieras que esté el icono */
-            display: flex;       /* Esto permite que los elementos dentro del botón (el icono y el texto) se alineen horizontalmente */
-        }
-
-        header .boton-subir-producto img { /* Imaginando que tienes un icono + */
-            height: 20px;
-            margin-right: 5px;   /* Esto proporciona un pequeño espacio entre el icono y el texto */
-        }
-
-        button {
-            width: auto;           /* Esto permite que el botón se ajuste al contenido */
-            min-width: 150px;      /* ancho mínimo */
-            white-space: nowrap;   /* Esto previene que el texto dentro del botón salte a la siguiente línea */
-            padding-left: 5px;
-            text-align: left;  /* Alinea el contenido del botón a la izquierda */
-        }
-
-        section {
-            background-color: white;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        input, textarea, select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        footer {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: white;
-        }
-        footer img {
-            height: 30px;
-        }
-
-        @media (max-width: 1000px) {
-            header .iconos-header, header .boton-subir-producto {
-                display: none; /* Ocultamos los iconos y el botón de "Subir Producto" */
-            }
-        }
-        
-        /* A partir de 1000px de ancho de pantalla */
-        @media (min-width: 1000px) {
-            
-            /* Ocultamos el footer */
-            footer {
-                display: none;
-            }
-        }
-
-
-        /* Estilos para el menú izquierdo
-        aside#menu-izquierdo {
-            width: 250px; 
-            height: 100vh;
-            position: fixed;
-            left: 0;
-            top: 0;
-            background-color: #ffffff; /* Puedes cambiar este valor al color que desees 
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-        
-        .user-info {
-            display: flex;
-            align-items: center;
-            gap: 10px; /* Espacio entre el icono y el nombre 
-            margin-bottom: 20px;
-        }
-        
-        .user-info img {
-            width: 50px; /* Puedes ajustar este valor según lo necesites 
-            height: 50px;
-            border-radius: 50%; /* Para hacer la imagen redonda 
-        }
-        
-        nav.menu-opciones ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        nav.menu-opciones li {
-            margin-bottom: 15px;
-        }
-        
-        nav.menu-opciones a {
-            text-decoration: none;
-            color: #333; /* Cambia este valor al color que desees
-        } */
-        
-        </style>
+    <!-- own CSS -->
+    <link rel="stylesheet" href="css/user.css">
+    
+    <title>User page</title>
 </head>
+
+
 <body>
     <!--
     <aside id="menu-izquierdo"> 
@@ -207,72 +49,93 @@
         </div>
     </header>
 
-    <section>
-        <h2>Información del producto</h2>
-        <p>¿Qué vendes? Proporciona toda la información relevante</p>
-        <label>En pocas palabras...
-            <input type="text" placeholder="En pocas palabras..." maxlength="50">
-        </label>
-        <div>
-            <label style="width: 48%; float: left;">Categoría
-                <select name="categoria">
-                    <!-- Las opciones de categorías irán aquí -->
-                </select>
-            </label>
-            <label style="width: 48%; float: right;">Subcategoría
-                <select name="subcategoria">
-                    <!-- Las opciones de subcategorías irán aquí -->
-                </select>
-            </label>
-            <div style="clear: both;"></div>
-        </div>
-        <div>
-            <label style="width: 48%; float: left;">Estado del producto
-                <select name="estado">
-                    <!-- Las opciones de estado irán aquí -->
-                </select>
-            </label>
-            <label style="width: 48%; float: left; margin-left: 4%;">Precio
-                <input type="number" placeholder="Sé razonable...">
-            </label>
-            <label style="width: 10%; float: right;">Moneda
-                <select name="moneda">
-                    <option value="euro">€</option>
-                </select>
-            </label>
-            <div style="clear: both;"></div>
-        </div>
-        <label>Descripción
-            <textarea placeholder="Añade información relevante como estado, modelo, color..." maxlength="640"></textarea>
-        </label>
+    <form action="URL_DEL_SERVIDOR" method="POST" id="producto-form"></form>
 
-        <label>Hashtags
-            <input type="text" placeholder="Buscar o crear hashtag" maxlength="5">
-        </label>
-    </section>
+        <div class="iconos-centrales">
+            <p>Do you want...<br>to buy or sell?</p>
+            <div class="icono-contenedor">
+                <input type="checkbox" id="icono1" class="icono-checkbox">
+                <label for="icono1" class="icono-label">
+                    <img src="icons/compra.png" alt="Icono 1">
+                </label>
+            </div>
 
-    <footer>
-        <div>
-            <img src="icons/tb-home-active.svg" alt="Icono Inicio">
-            <p>Inicio</p>
+            <div class="icono-contenedor">
+                <input type="checkbox" id="icono2" class="icono-checkbox">
+                <label for="icono2" class="icono-label">
+                    <img src="icons/sale.png" alt="Icono 2">
+                </label>
+            </div>
         </div>
-        <div>
-            <img src="icons/tb-favorites.svg" alt="Icono Favoritos">
-            <p>Favoritos</p>
-        </div>
-        <div>
-            <img src="icons/tb-upload.svg" alt="Icono Súbelo">
-            <p>Súbelo</p>
-        </div>
-        <div>
-            <img src="icons/tb-inbox.svg" alt="Icono Buzón">
-            <p>Buzón</p>
-        </div>
-        <div>
-            <img src="icons/tb-you.svg" alt="Icono Tú">
-            <p>Tú</p>
-        </div>
-    </footer>
+
+        <section class="producto-upload">
+            <h2>Información del producto</h2>
+            <p>¿Qué vendes? Proporciona toda la información relevante</p>
+            <label>En pocas palabras...
+                <input type="text" placeholder="En pocas palabras..." maxlength="50">
+            </label>
+            <div>
+                <label style="width: 48%; float: left;">Categoría
+                    <select name="categoria">
+                        <!-- Las opciones de categorías irán aquí -->
+                    </select>
+                </label>
+                <label style="width: 48%; float: right;">Subcategoría
+                    <select name="subcategoria">
+                        <!-- Las opciones de subcategorías irán aquí -->
+                    </select>
+                </label>
+                <div style="clear: both;"></div>
+            </div>
+            <div>
+                <label style="width: 48%; float: left;">Estado del producto
+                    <select name="estado">
+                        <!-- Las opciones de estado irán aquí -->
+                    </select>
+                </label>
+                <label style="width: 48%; float: left; margin-left: 4%;">Precio
+                    <input type="number" placeholder="Sé razonable...">
+                </label>
+                <label style="width: 10%; float: right;">Moneda
+                    <select name="moneda">
+                        <option value="euro">€</option>
+                    </select>
+                </label>
+                <div style="clear: both;"></div>
+            </div>
+            <label>Descripción
+                <textarea placeholder="Añade información relevante como estado, modelo, color..." maxlength="640"></textarea>
+            </label>
+
+            <label>Hashtags
+                <input type="text" placeholder="Buscar o crear hashtag" maxlength="5">
+            </label>
+        </section>
+
+        <footer>
+            <div>
+                <img src="icons/tb-home-active.svg" alt="Icono Inicio">
+                <p>Inicio</p>
+            </div>
+            <div>
+                <img src="icons/tb-favorites.svg" alt="Icono Favoritos">
+                <p>Favoritos</p>
+            </div>
+            <div>
+                <img src="icons/tb-upload.svg" alt="Icono Súbelo">
+                <p>Súbelo</p>
+            </div>
+            <div>
+                <img src="icons/tb-inbox.svg" alt="Icono Buzón">
+                <p>Buzón</p>
+            </div>
+            <div>
+                <img src="icons/tb-you.svg" alt="Icono Tú">
+                <p>Tú</p>
+            </div>
+        </footer>
+    
+    </form>
 
 </body>
 </html>

@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'Wallie-Fit';  
+    src: url('../assets/fonts/Wallie-Fit.woff2') format('woff2'),  
+    url('../assets/fonts/Wallie-Fit.woff') format('woff'),  
+    url('../assets/fonts/Wallie-Fit.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal;
+}
+
+
+
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* organiza elementos hijos en una columna */
+    justify-content: center; /* centrar hijos verticalmente */
+    align-items: center; /* Centrar verticalmente */
+    min-height: 100vh; /* Asegura que body tome al menos el alto completo de la ventana */
+    
+    font-family: 'Wallie-Fit', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.producto-upload {
+    max-width: 1000px;  /* ancho máximo */
+    margin: 50px 0; /* Por ejemplo, 50px arriba y abajo. Puedes ajustar según prefieras */
+}
+
+header {
+    width: 100%; 
+    box-sizing: border-box; /* Esto asegura que el padding no sume al ancho total del header */
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+
+}
+
+.busqueda {
+    border: 1px solid gray;
+    padding: 2px 10px; /* Reducimos aún más el padding vertical */
+    border-radius: 25px;
+    font-size: 14px; /* Puedes ajustar esto según tus preferencias */
+    line-height: 1.2; /* Esto define el espacio entre líneas, ajusta según prefieras */
+}
+
+
+header .logo {
+    height: 50px; /* Reducimos el tamaño de los iconos */
+    margin-top: 0px; /* bajar el logo */
+}
+
+header img {
+    height: 20px; /* Reducimos el tamaño de los iconos */
+}
+
+.iconos-header img {
+    margin-left: 10px; /* Ajusta este valor según tu preferencia */
+}
+
+header .iconos-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header .boton-subir-producto {
+    background-color: #35c9b0c2; /* Verde turquesa */
+    border: none;
+    border-radius: 50px; /* Lados totalmente redondeados */
+    color: white;
+    padding: 1px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding-left: 5px;   /* Puedes ajustar este valor según cuán pegado quieras que esté el icono */
+    display: flex;       /* Esto permite que los elementos dentro del botón (el icono y el texto) se alineen horizontalmente */
+}
+
+header .boton-subir-producto img { /* Imaginando que tienes un icono + */
+    height: 20px;
+    margin-right: 5px;   /* Esto proporciona un pequeño espacio entre el icono y el texto */
+}
+
+button {
+    width: auto;           /* Esto permite que el botón se ajuste al contenido */
+    min-width: 150px;      /* ancho mínimo */
+    white-space: nowrap;   /* Esto previene que el texto dentro del botón salte a la siguiente línea */
+    padding-left: 5px;
+    text-align: left;  /* Alinea el contenido del botón a la izquierda */
+}
+
+
+/**/
+.iconos-centrales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px; /* Espacio entre los iconos */
+    margin: 60px 0; /* Margen superior e inferior para separar del header y la sección */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.iconos-centrales p {
+    display: flex; /* Permite centrar el texto verticalmente con los iconos */
+    flex-direction: column; /* Alinea el texto y los iconos verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido del párrafo */
+    text-align: center; /* Centra el contenido horizontalmente */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    margin-bottom: 5px; /* Agrega espacio entre el texto y los iconos (ajusta según tus necesidades) */
+}
+
+.icono-contenedor {
+    padding: 5px; /* Añade espacio alrededor de cada ícono */
+    background-color: #f4f4f4; /* Color de fondo para el bloque */
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+    display: inline-block; /* Los elementos de icono se muestran en línea */
+}
+
+.icono-label img {
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 50px; 
+    height: 50px; 
+}
+
+.icono-label:hover img {
+    transform: scale(1.1); /* Al pasar el cursor por encima, el icono crecerá un 10% */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+}
+
+.icono-label:active img {
+    transform: scale(0.90); /* Al hacer clic, el icono se reducirá un 5% */
+    filter: brightness(0.7); /* Oscurece el color del icono un 30% al hacer clic */
+}
+
+.icono-checkbox {
+    display: none; /* Oculta el checkbox */
+}
+
+
+.icono-checkbox:checked ~ .icono-contenedor {
+    background-color: rgba(38, 180, 137, 0.482);
+}
+
+.icono-checkbox:checked ~ .icono-label img {
+    transform: scale(0.95); /* Reducción del 5% cuando el checkbox esté marcado */
+    filter: brightness(0.8); /* Oscurece el color del icono un 20% */
+}
+
+
+/* SECCION */
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column; /* Esto coloca el ícono encima del texto */
+    align-items: center;    /* Esto centra verticalmente el contenido */
+}
+
+footer img {
+    height: 30px;
+}
+
+footer p {
+    margin: 0; /* Esto elimina cualquier margen predeterminado que pueda desplazar el texto */
+}
+
+
+@media (max-width: 1000px) {
+    header .iconos-header, header .boton-subir-producto {
+        display: none; /* Ocultamos los iconos y el botón de "Subir Producto" */
+    }
+}
+
+/* A partir de 1000px de ancho de pantalla */
+@media (min-width: 1000px) {
+    
+    /* Ocultamos el footer */
+    footer {
+        display: none;
+    }
+}
+
+
+/* Estilos para el menú izquierdo
+aside#menu-izquierdo {
+    width: 250px; 
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #ffffff; /* Puedes cambiar este valor al color que desees 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y el nombre 
+    margin-bottom: 20px;
+}
+
+.user-info img {
+    width: 50px; /* Puedes ajustar este valor según lo necesites 
+    height: 50px;
+    border-radius: 50%; /* Para hacer la imagen redonda 
+}
+
+nav.menu-opciones ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav.menu-opciones li {
+    margin-bottom: 15px;
+}
+
+nav.menu-opciones a {
+    text-decoration: none;
+    color: #333; /* Cambia este valor al color que desees
+} */
