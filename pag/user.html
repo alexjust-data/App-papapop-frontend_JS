@@ -34,39 +34,55 @@
     </aside>-->
 
     <header>
-        <img class="logo" src="images/logo_papapop.png" alt="papapop Logo">
+
+        <img class="logo" src="images/logo_papapop.png" alt="papapop Logo" href="URL_DE_TU_PAGINA_DE_INICIO">
+            
         <input class="busqueda" type="search" placeholder="Buscar en todas las categorías">
+        
         <div class="iconos-header">
-            <img src="icons/tb-favorites.svg" alt="Icono Favoritos">
-                <span>Favoritos</span>
-            <img src="icons/tb-inbox.svg" alt="Icono Buzón">
-                <span>Buzón</span>
-            <img src="icons/tb-you.svg" alt="Icono Usuario">
-                <span>Tu</span>
-            <button class="boton-subir-producto">
+
+            <a href="URL_DEL_ICONO_FAVORITOS">
+                <img src="icons/tb-favorites.svg" alt="Icono Favoritos">
+            </a>
+            <span>Favoritos</span>
+
+            <a href="URL_DEL_ICONO_BUZON">
+                <img src="icons/tb-inbox.svg" alt="Icono Buzón">
+            </a>
+            <span>Buzón</span>
+
+            <a href="URL_DEL_ICONO_USUARIO">
+                <img src="icons/tb-you.svg" alt="Icono Usuario">
+            </a>
+            <span>Tu</span>
+
+            <button class="boton-subir-producto" href="URL_DEL_ICONO_FAVORITOS">
                 <img src="icons/mas.png" alt="Icono +"> Subir Producto
             </button>
+
         </div>
     </header>
 
     <form action="URL_DEL_SERVIDOR" method="POST" id="producto-form"></form>
 
         <div class="iconos-centrales">
-            <p>Do you want...<br>to buy or sell?</p>
+            <p>Do you want ...<br>BUY or SELL ?</p>
+        
             <div class="icono-contenedor">
-                <input type="checkbox" id="icono1" class="icono-checkbox">
+                <input type="radio" name="iconos" id="icono1" class="icono-checkbox">
                 <label for="icono1" class="icono-label">
                     <img src="icons/compra.png" alt="Icono 1">
                 </label>
             </div>
-
+        
             <div class="icono-contenedor">
-                <input type="checkbox" id="icono2" class="icono-checkbox">
+                <input type="radio" name="iconos" id="icono2" class="icono-checkbox">
                 <label for="icono2" class="icono-label">
                     <img src="icons/sale.png" alt="Icono 2">
                 </label>
             </div>
         </div>
+    
 
         <section class="producto-upload">
             <h2>Información del producto</h2>

@@ -7,9 +7,6 @@
     font-style: normal;
 }
 
-
-
-
 body {
     height: 100%;
     display: flex;
@@ -20,11 +17,13 @@ body {
     
     font-family: 'Wallie-Fit', sans-serif;
     background-color: #f5f5f5;
+    color: #808080a4; /* Un gris medio. Puedes ajustar este valor según lo claro que quieras que sea el gris. */
 }
 
 .producto-upload {
     max-width: 1000px;  /* ancho máximo */
-    margin: 50px 0; /* Por ejemplo, 50px arriba y abajo. Puedes ajustar según prefieras */
+    margin: 15px 0; /* Por ejemplo, 50px arriba y abajo*/
+    margin-bottom: 150px;
 }
 
 header {
@@ -36,7 +35,7 @@ header {
     padding: 20px;
     padding-left: 70px;
     padding-right: 70px;
-
+    margin-bottom: 15px;
 }
 
 .busqueda {
@@ -45,12 +44,29 @@ header {
     border-radius: 25px;
     font-size: 14px; /* Puedes ajustar esto según tus preferencias */
     line-height: 1.2; /* Esto define el espacio entre líneas, ajusta según prefieras */
+
+    /* Establece un padding izquierdo para el contenedor del fondo de la lupa */
+    padding-left: 45px; /* margen izquierda para el contenedor */
+
+    /* Fondo de la lupa */
+    background-image: url('/App-Papapop-frontend_JS/pag/icons/lupa.png');
+    background-position: -30px; /* Ajusta la posición horizontal según tus necesidades */
+    background-repeat: no-repeat;
+    background-size: 25px 25px; /* tamaño icono lupa */
+    background-origin: content-box; /* Aplicar padding al fondo */
 }
 
-
-header .logo {
+.logo {
     height: 50px; /* Reducimos el tamaño de los iconos */
     margin-top: 0px; /* bajar el logo */
+    cursor: pointer;
+}
+
+.logo a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
 }
 
 header img {
@@ -66,6 +82,7 @@ header .iconos-header {
     align-items: center;
     gap: 10px;
 }
+
 header .boton-subir-producto {
     background-color: #35c9b0c2; /* Verde turquesa */
     border: none;
@@ -82,7 +99,7 @@ header .boton-subir-producto {
 
 header .boton-subir-producto img { /* Imaginando que tienes un icono + */
     height: 20px;
-    margin-right: 5px;   /* Esto proporciona un pequeño espacio entre el icono y el texto */
+    margin-right: 5px;     /* Esto proporciona un pequeño espacio entre el icono y el texto */
 }
 
 button {
@@ -90,18 +107,18 @@ button {
     min-width: 150px;      /* ancho mínimo */
     white-space: nowrap;   /* Esto previene que el texto dentro del botón salte a la siguiente línea */
     padding-left: 5px;
-    text-align: left;  /* Alinea el contenido del botón a la izquierda */
+    text-align: left;      /* Alinea el contenido del botón a la izquierda */
 }
 
 
-/**/
+/* iconos */
 .iconos-centrales {
     display: flex;
     justify-content: center;
     align-items: center;
 
     gap: 20px; /* Espacio entre los iconos */
-    margin: 60px 0; /* Margen superior e inferior para separar del header y la sección */
+    margin: 15px 0; /* Margen superior e inferior para separar del header y la sección */
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -118,11 +135,11 @@ button {
 }
 
 .icono-contenedor {
-    padding: 5px; /* Añade espacio alrededor de cada ícono */
+    padding: 2px; /* Añade espacio alrededor de cada ícono */
     background-color: #f4f4f4; /* Color de fondo para el bloque */
     border: 1px solid #ccc; 
     border-radius: 10px;
-    display: inline-block; /* Los elementos de icono se muestran en línea */
+    cursor: pointer;
 }
 
 .icono-label img {
@@ -134,27 +151,18 @@ button {
 
 .icono-label:hover img {
     transform: scale(1.1); /* Al pasar el cursor por encima, el icono crecerá un 10% */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
 }
 
 .icono-label:active img {
     transform: scale(0.90); /* Al hacer clic, el icono se reducirá un 5% */
-    filter: brightness(0.7); /* Oscurece el color del icono un 30% al hacer clic */
 }
 
-.icono-checkbox {
-    display: none; /* Oculta el checkbox */
-}
-
-
-.icono-checkbox:checked ~ .icono-contenedor {
-    background-color: rgba(38, 180, 137, 0.482);
-}
-
-.icono-checkbox:checked ~ .icono-label img {
+.icono-checkbox:checked + .icono-label img {
     transform: scale(0.95); /* Reducción del 5% cuando el checkbox esté marcado */
     filter: brightness(0.8); /* Oscurece el color del icono un 20% */
 }
+
 
 
 /* SECCION */
@@ -221,43 +229,3 @@ footer p {
         display: none;
     }
 }
-
-
-/* Estilos para el menú izquierdo
-aside#menu-izquierdo {
-    width: 250px; 
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: #ffffff; /* Puedes cambiar este valor al color que desees 
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espacio entre el icono y el nombre 
-    margin-bottom: 20px;
-}
-
-.user-info img {
-    width: 50px; /* Puedes ajustar este valor según lo necesites 
-    height: 50px;
-    border-radius: 50%; /* Para hacer la imagen redonda 
-}
-
-nav.menu-opciones ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav.menu-opciones li {
-    margin-bottom: 15px;
-}
-
-nav.menu-opciones a {
-    text-decoration: none;
-    color: #333; /* Cambia este valor al color que desees
-} */
