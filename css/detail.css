@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'Wallie-Fit';  
+    src: url('../assets/fonts/Wallie-Fit.woff2') format('woff2'),  
+    url('../assets/fonts/Wallie-Fit.woff') format('woff'),  
+    url('../assets/fonts/Wallie-Fit.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal;
+}
+
+
+body {
+    height: 100%;
+    min-height: 100vh; /* Asegura que body tome al menos el alto completo de la ventana */
+    font-family: 'Wallie-Fit', sans-serif;
+    background-color: #f5f5f5;
+    color: #808080a4; /* Un gris medio. Puedes ajustar este valor según lo claro que quieras que sea el gris. */
+}
+
+header {
+    width: 100%; 
+    box-sizing: border-box; /* Esto asegura que el padding no sume al ancho total del header */
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 15px;
+}
+
+.busqueda {
+    border: 1px solid gray;
+    padding: 2px 10px; /* Reducimos aún más el padding vertical */
+    border-radius: 25px;
+    font-size: 14px; /* Puedes ajustar esto según tus preferencias */
+    line-height: 1.2; /* Esto define el espacio entre líneas, ajusta según prefieras */
+
+    /* Establece un padding izquierdo para el contenedor del fondo de la lupa */
+    padding-left: 45px; /* margen izquierda para el contenedor */
+
+    /* Fondo de la lupa */
+    background-image: url('../icons/lupa.png');
+    background-position: -30px; /* Ajusta la posición horizontal según tus necesidades */
+    background-repeat: no-repeat;
+    background-size: 25px 25px; /* tamaño icono lupa */
+    background-origin: content-box; /* Aplicar padding al fondo */
+}
+
+.logo {
+    height: 50px; /* Reducimos el tamaño de los iconos */
+    margin-top: 0px; /* bajar el logo */
+    cursor: pointer;
+}
+
+.logo a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+header img {
+    height: 20px; /* Reducimos el tamaño de los iconos */
+}
+
+.iconos-header img {
+    margin-left: 10px; /* Ajusta este valor según tu preferencia */
+}
+
+header .iconos-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .boton-subir-producto {
+    background-color: #35c9b0c2; /* Verde turquesa */
+    border: none;
+    border-radius: 50px; /* Lados totalmente redondeados */
+    color: white;
+    padding: 1px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding-left: 5px;   /* Puedes ajustar este valor según cuán pegado quieras que esté el icono */
+    display: flex;       /* Esto permite que los elementos dentro del botón (el icono y el texto) se alineen horizontalmente */
+}
+
+header .boton-subir-producto img { /* Imaginando que tienes un icono + */
+    height: 20px;
+    margin-right: 5px;     /* Esto proporciona un pequeño espacio entre el icono y el texto */
+}
+
+button {
+    width: auto;           /* Esto permite que el botón se ajuste al contenido */
+    min-width: 150px;      /* ancho mínimo */
+    white-space: nowrap;   /* Esto previene que el texto dentro del botón salte a la siguiente línea */
+    padding-left: 5px;
+    text-align: left;      /* Alinea el contenido del botón a la izquierda */
+}
+
+/* SECCION */
+.producto-detail {
+    max-width: 700px;  /* ancho máximo */
+    margin: 45px auto 100px auto; /* centrado horizontalmente, 15px arriba, 150px abajo */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .producto-detail {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+button.btn.btn-success {
+    background-color: #35c9b0c2;
+    border-radius: 50px;
+    border: none;
+  }
+  
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;  
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.footer-section-buy {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 20px; /* Espacio por encima */
+    margin-bottom: 20px; /* Espacio por debajo */
+}
+
+.footer-section-icons {
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;  
+    border-top: 1px solid gray; /* Línea que va de extremo a extremo */
+    padding-top: 20px; /* Espacio entre la línea y los íconos */
+}
+
+.footer-icon-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+}
+
+footer img {
+    height: 30px;
+}
+
+footer p {
+    margin: 0; 
+}
+
+.footer-col-price {
+    margin-right: 20px; /* Añade margen a la derecha */
+}
+
+.footer-col-btn {
+    margin-left: 20px; /* Añade margen a la izquierda */
+}
+
+
+@media (max-width: 1000px) {
+    header .iconos-header, header .boton-subir-producto {
+        display: none; 
+    }
+    footer {
+        flex-direction: column;  
+    }
+    .footer-section-buy {
+        order: -1;  
+        justify-content: center;  
+    }
+}
+
+@media (min-width: 1000px) {
+    .footer-section-icons {
+        display: none;
+    }
+    footer {
+        flex-direction: row; 
+    }
+}
+
+
+
+

@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Wallie-Fit';  
+    src: url('assets/fonts/Wallie-Fit.woff2') format('woff2'),  
+    url('assets/fonts/Wallie-Fit.woff') format('woff'),  
+    url('assets/fonts/Wallie-Fit.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal;
+}
+
+body {
+    font-family: 'Wallie-Fit', sans-serif; /* Usamos 'sans-serif' como una fuente de respaldo en caso de que 'Wallie-Fit' no se cargue */
+}
+
+.card-header {
+    border-bottom: none; /* Elimina el borde inferior del card-header */
+}
+
+.card-header span {
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre los íconos */
+    font-size: 1.5rem; /* Ajusta el tamaño de los íconos */
+    font-weight: 100;  /* Un valor más bajo hace que el texto (iconos) sea más fino */
+}
+
+.hover-lighten {
+    cursor: pointer;  /* Cambia el cursor a una mano */
+    transition: color 0.3s; /* Transición suave del color al pasar el mouse */
+}
+
+.hover-lighten:hover {
+    color: #d3d3d3;  /* color al pasar por encima de los iconos */
+}
+
+.fixed-width-card {
+    width: 300px;  /* fijamos el ancho */
+    border-radius: 15px; /*redondea los cantos de la tarjeta*/
+}
+
+
+.text-left {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.card-body {
+    padding-bottom: 40px;
+}
+
+.custom-size {
+    font-size: 0.7rem;
+    margin-left: 1rem; /* Aumenta el espacio a la izquierda */
+}
+
+.form-control:hover { /* que los campos de entrada se resalten */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Resaltado con un ligero sombreado azul */
+    border-color: #8e8e8ead; /* Borde azul */
+}
+
+a {
+    color: rgba(61, 210, 185, 0.533);
+}
+
+.btn-success {
+    background-color: rgba(61, 210, 185, 0.424);;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 50px; /* Cantos completamente redondeados */
+    width: 100%; /* Hace el botón más alargado */
+    color: rgba(128, 128, 128, 0.489); /*color del texto*/
+}
+
+.mb-4 {
+    margin-bottom: 4rem !important; /* !important para sobrescribir el estilo previo si es necesario */
+}
+
+
+/* Estilo base para el checkbox no marcado */
+.form-check-input {
+    background-color: rgba(128, 128, 128, 0.165); /* Fondo transparente */
+    border: 1px solid #ababab; /* Borde de color gris claro */
+}
+
+.vh-77 { /* Estilo base para mover arriba la card */
+    height: 77vh;
+}

@@ -7,23 +7,13 @@
     font-style: normal;
 }
 
+
 body {
     height: 100%;
-    display: flex;
-    flex-direction: column; /* organiza elementos hijos en una columna */
-    justify-content: center; /* centrar hijos verticalmente */
-    align-items: center; /* Centrar verticalmente */
     min-height: 100vh; /* Asegura que body tome al menos el alto completo de la ventana */
-    
     font-family: 'Wallie-Fit', sans-serif;
     background-color: #f5f5f5;
     color: #808080a4; /* Un gris medio. Puedes ajustar este valor según lo claro que quieras que sea el gris. */
-}
-
-.producto-upload {
-    max-width: 1000px;  /* ancho máximo */
-    margin: 15px 0; /* Por ejemplo, 50px arriba y abajo*/
-    margin-bottom: 150px;
 }
 
 header {
@@ -36,6 +26,7 @@ header {
     padding-left: 70px;
     padding-right: 70px;
     margin-bottom: 15px;
+    justify-content: flex-start; /* Cambiado de 'space-between' */
 }
 
 .busqueda {
@@ -49,11 +40,14 @@ header {
     padding-left: 45px; /* margen izquierda para el contenedor */
 
     /* Fondo de la lupa */
-    background-image: url('/App-Papapop-frontend_JS/pag/icons/lupa.png');
+    background-image: url('../icons/lupa.png');
     background-position: -30px; /* Ajusta la posición horizontal según tus necesidades */
     background-repeat: no-repeat;
     background-size: 25px 25px; /* tamaño icono lupa */
     background-origin: content-box; /* Aplicar padding al fondo */
+
+    flex-grow: 1; /* Esto permitirá que la barra de búsqueda se expanda y ocupe el espacio disponible */
+    margin-left: 20px; /* Añade un margen para separarla un poco del logo */
 }
 
 .logo {
@@ -102,90 +96,41 @@ header .boton-subir-producto img { /* Imaginando que tienes un icono + */
     margin-right: 5px;     /* Esto proporciona un pequeño espacio entre el icono y el texto */
 }
 
-button {
-    width: auto;           /* Esto permite que el botón se ajuste al contenido */
-    min-width: 150px;      /* ancho mínimo */
-    white-space: nowrap;   /* Esto previene que el texto dentro del botón salte a la siguiente línea */
-    padding-left: 5px;
-    text-align: left;      /* Alinea el contenido del botón a la izquierda */
-}
-
-
-/* iconos */
-.iconos-centrales {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 20px; /* Espacio entre los iconos */
-    margin: 15px 0; /* Margen superior e inferior para separar del header y la sección */
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.iconos-centrales p {
-    display: flex; /* Permite centrar el texto verticalmente con los iconos */
-    flex-direction: column; /* Alinea el texto y los iconos verticalmente */
-    align-items: center; /* Centra horizontalmente el contenido del párrafo */
-    text-align: center; /* Centra el contenido horizontalmente */
-    font-weight: bold; /* Hace que el texto sea negrita */
-    margin-bottom: 5px; /* Agrega espacio entre el texto y los iconos (ajusta según tus necesidades) */
-}
-
-.icono-contenedor {
-    padding: 2px; /* Añade espacio alrededor de cada ícono */
-    background-color: #f4f4f4; /* Color de fondo para el bloque */
-    border: 1px solid #ccc; 
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.icono-label img {
-    cursor: pointer;
-    transition: all 0.3s;
-    width: 50px; 
-    height: 50px; 
-}
-
-.icono-label:hover img {
-    transform: scale(1.1); /* Al pasar el cursor por encima, el icono crecerá un 10% */
-    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
-}
-
-.icono-label:active img {
-    transform: scale(0.90); /* Al hacer clic, el icono se reducirá un 5% */
-}
-
-.icono-checkbox:checked + .icono-label img {
-    transform: scale(0.95); /* Reducción del 5% cuando el checkbox esté marcado */
-    filter: brightness(0.8); /* Oscurece el color del icono un 20% */
-}
-
-
+button.btn.btn-success {
+    background-color: #35c9b0c2;
+    border-radius: 50px;
+    border: none;
+  }
 
 /* SECCION */
-section {
-    background-color: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.container.mt-4 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;  /* Asegura que el padding y el borde estén incluidos en el tamaño total */
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
+.row {
+    max-width: 1200px; /* Limita el ancho máximo para centrarlo en la pantalla */
+    margin: 0 auto;
+    box-sizing: border-box;  /* Asegura que el padding y el borde estén incluidos en el tamaño total */
 }
 
-input, textarea, select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+/* Esto se asegura de que en pantallas medianas tengamos 4 columnas por fila */
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 5px;  /* Espacio alrededor de cada caja */
+    box-sizing: border-box;  /* Asegura que el padding y el borde estén incluidos en el tamaño total */
 }
+
+/* Ajusta los márgenes y el padding si es necesario */
+.card {
+    margin: 0;  /* Elimina el margen ya que el padding en .col-md-3 creará el espacio */
+    border-radius: 15px;
+}
+
+
 
 /* FOOTER */
 footer {
@@ -215,6 +160,7 @@ footer p {
 }
 
 
+
 @media (max-width: 1000px) {
     header .iconos-header, header .boton-subir-producto {
         display: none; /* Ocultamos los iconos y el botón de "Subir Producto" */
@@ -229,3 +175,25 @@ footer p {
         display: none;
     }
 }
+
+/* En pantallas más grandes que 1000px, queremos que haya 4 anuncios por fila */
+@media (min-width: 1000px) {
+    .col-md-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+/* En pantallas más pequeñas que 1000px, queremos que haya 1 anuncio por fila */
+@media (max-width: 999px) {
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
