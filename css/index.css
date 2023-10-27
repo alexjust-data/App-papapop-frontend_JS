@@ -110,7 +110,7 @@ button.btn.btn-success {
     box-sizing: border-box;  /* Asegura que el padding y el borde estén incluidos en el tamaño total */
 }
 
-.row {
+#ads {
     max-width: 1200px; /* Limita el ancho máximo para centrarlo en la pantalla */
     margin: 0 auto;
     box-sizing: border-box;  /* Asegura que el padding y el borde estén incluidos en el tamaño total */
@@ -130,6 +130,17 @@ button.btn.btn-success {
     border-radius: 15px;
 }
 
+.card-price {
+    font-size: 1.6em; /* o el tamaño que prefieras */
+    margin: 0 0 5px 0; /* Ajusta el margen inferior según necesites */
+}
+
+.card-title {
+    font-size: 1em; /* o el tamaño que prefieras */
+    margin: 0;
+    color:rgba(0, 0, 0, 0.356);
+    font-weight: normal; /* para asegurarse de que no esté en negrita */
+}
 
 
 /* FOOTER */
