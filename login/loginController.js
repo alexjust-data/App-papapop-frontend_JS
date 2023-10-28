@@ -6,11 +6,7 @@ import { loginUser } from "./loginModel.js";
 
 export const loginController = (loginForm) => {
 
-    /**  Escuchador de evento 'submit' del DOM:
-     * se agrega un escuchador al evento 'submit' del formulario loginForm. <button type="submit">Login</button>
-     * Cuando el evento se dispara (cuando un usuario hace clic en el botón "Login" del formulario), 
-     * el escuchador ejecuta el código que se le ha asignado.
-     */
+    // Escuchador de evento 'submit' del DOM:<button type="submit">Login</button>
    loginForm.addEventListener('submit', (event) => {
         event.preventDefault(); // permite acciones adicionales, antes envío predeterminado
     
@@ -29,7 +25,7 @@ const submitLogin = async (loginForm) => {
         const jwt = await loginUser(email, password);     // Attempt to log the user in
         alert('login OK');                                // Notify the user of a successful login
         localStorage.setItem('token', jwt);               // Store the JWT token for future authenticated requests
-        window.location = './index.html';                 // Redirect the user to the main page
+        window.location = './session.html';                 // Redirect the user to the main page
     } catch (error) {
         alert(error);                                     // Handle any login errors by notifying the user
     } finally {
@@ -52,13 +48,12 @@ const getLoginData = (loginForm) => {
      */
     const formData = new FormData(loginForm);
     
-    // Extraer el valor del campo '...' del objeto formData
     const email = formData.get('email');
     const password = formData.get('password');
   
-    return {     // Retornar un objeto con los datos extraídos.
-      email,     // Equivalente a email: email,
-      password   // Equivalente a password: password
+    return {     
+      email,     // email: email,
+      password   // password: password
     };
 }
   

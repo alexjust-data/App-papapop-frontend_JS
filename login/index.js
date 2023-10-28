@@ -7,9 +7,6 @@ import { loaderController } from '../loader/loaderController.js';
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.querySelector('#login');
 
-    loginController(loginForm);
-
-
     const loader = document.querySelector('#loader');
     const { show, hide } = loaderController(loader);
 

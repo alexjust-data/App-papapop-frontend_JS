@@ -87,3 +87,23 @@ a {
 .vh-102 { /* Estilo base para mover arriba la card */
     height: 102vh;
 }
+
+
+/* quitamos estilo a la flecha */
+a {
+    text-decoration: none; /* Esto quitará el subrayado */
+    color: inherit; /* Esto hará que el enlace herede el color de su elemento padre */
+}
+
+a:hover {
+    text-decoration: none; /* Esto asegurará que el subrayado tampoco aparezca al pasar el cursor por encima */
+}
+
+.custom-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-link:hover {
+    text-decoration: none;
+}
