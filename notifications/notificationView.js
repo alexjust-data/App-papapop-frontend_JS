@@ -13,11 +13,12 @@
  * buildNotification('Error al cargar tweets', 'error');
  * 
  */
-export const buildNotification = (message, type) => {
-    return `
-      <div class="notification ${type}">
-        <p>${message}</p>
-      </div>
-    `
-  }
 
+
+export const buildNotification = (message, type) => {
+  return `
+    <div class="notification ${type}">
+      <p>${message}</p>
+    </div>
+  `
+}

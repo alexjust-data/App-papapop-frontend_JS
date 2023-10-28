@@ -9,7 +9,7 @@
  */
 
 
-// Importa la función encargada de construir la estructura HTML de la notificación.
+
 import { buildNotification } from "./notificationView.js";
 
 
@@ -39,10 +39,9 @@ export const notificationsController = (notifications) => {
      */
     const showNotification = (message, type) => {
         notifications.innerHTML = buildNotification(message, type);
-
         setTimeout(() => {
             notifications.innerHTML = '';
-          }, 3000);
+        }, 1500);
     }
 
     return showNotification;

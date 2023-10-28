@@ -15,8 +15,12 @@
  <body>
 
     <header>
-        <img class="logo" src="images/logo_papapop.png" alt="papapop Logo" href="URL_DE_TU_PAGINA_DE_INICIO">
-            
+
+        <a href="/session.html">
+            <img class="logo" src="images/logo_papapop.png" alt="papapop Logo">
+        </a>
+        
+       
         <input class="busqueda" type="search" placeholder="Buscar en todas las categorías">
         
         <div class="iconos-header">
@@ -43,26 +47,9 @@
         </div>
     </header>
 
-    <section class="producto-detail">
-        <div class="row mt-4">
-            <div class="col-md-8">
-                <img src="path_to_product_image.jpg" alt="Product Image" class="img-fluid">
-            </div>
-            <div class="col-md-4">
-                <h5>Nintendo Switch</h5>
-                <h5>200 €</h5>
-                <p class="text-muted">Nuevo</p>
-                <p>Nueva, Regalo de Reyes Navidad 2023, en su caja con todos sus componentes y accesorios, no se ha usado ni 2horas. Dispone de dos videojuegos más: Mario Kart y Ring Fit si estás interesado serían 30€ más por cada juego.</p>
-                <button class="btn btn-success">Comprar</button>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <h5>Más artículos de cultivo en mi perfil</h5>
-                <p>...<span class="text-muted">(rest of the tags and description)</span></p>
-            </div>
-        </div>
-    </section>
+    <section id="notifications"></section>
+
+    <section id="adDetail" class="producto-detail"></section>
 
     <footer>
         <div class="footer-section-buy">
@@ -99,6 +86,7 @@
         </div>
     </footer>
     
+    <script type="module" src="./ad_detail/index.js"></script>
 
 </body>
 </html>

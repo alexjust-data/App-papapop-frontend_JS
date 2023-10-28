@@ -1,7 +1,5 @@
 
 
-
-
 export const buildAd = (ad) => {
     return `
         <div class="col-md-3 mb-4">

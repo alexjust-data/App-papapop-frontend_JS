@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- own CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/notifications.css">
+    <link rel="stylesheet" href="./css/loader.css" />
+    
+    <title>User page</title>
+</head>
+
+
+<body>
+
+    <header>
+        <a href="/index.html">
+            <img class="logo" src="images/logo_papapop.png" alt="papapop Logo">
+        </a>
+            
+        <input class="busqueda" type="search" placeholder="Buscar en todas las categorías">
+        
+        <div class="iconos-header">
+
+            <a href="URL_DEL_ICONO_FAVORITOS">
+                <img src="./icons/tb-favorites.svg" alt="Icono Favoritos">
+            </a>
+            <span>Favoritos</span>
+
+            <a href="URL_DEL_ICONO_BUZON">
+                <img src="./icons/tb-inbox.svg" alt="Icono Buzón">
+            </a>
+            <span>Buzón</span>
+
+            <a href="URL_DEL_ICONO_USUARIO">
+                <img src="./icons/tb-you.svg" alt="Icono Usuario">
+            </a>
+            <span>Tu</span>
+
+            <button class="btn btn-success" href="URL_DEL_ICONO_FAVORITOS">
+                <img src="./icons/mas.png" alt="Icono +"> Subir Producto
+            </button>
+
+        </div>
+    </header>
+
+    <section id="loader"></section>
+    <section id="notifications"></section>
+    
+    <section class="container mt-4">
+        <div id="ads" class="row">
+            <!-- ... [Repite bloques similares para otros productos] ... -->
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <img src="./icons/tb-home-active.svg" alt="Icono Inicio">
+            <p>Inicio</p>
+        </div>
+        <div>
+            <img src="./icons/tb-favorites.svg" alt="Icono Favoritos">
+            <p>Favoritos</p>
+        </div>
+        <div>
+            <img src="./icons/tb-upload.svg" alt="Icono Súbelo">
+            <p>Súbelo</p>
+        </div>
+        <div>
+            <img src="./icons/tb-inbox.svg" alt="Icono Buzón">
+            <p>Buzón</p>
+        </div>
+        <div>
+            <img src="./icons/tb-you.svg" alt="Icono Tú">
+            <p>Tú</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script type="module" src="index.js" defer></script>
+</body>
+</html>     
+
+

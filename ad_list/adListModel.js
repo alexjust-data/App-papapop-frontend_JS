@@ -6,6 +6,7 @@ const transformAds = (ads) => {
             image: ad.imagen,
             price: ad.precio,
             title: ad.titulo,
+            id: ad.id
         }
     })
 }

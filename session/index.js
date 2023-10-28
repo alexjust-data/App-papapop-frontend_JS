@@ -29,12 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     adListController(adList);
 })
 
-
 window.addEventListener('offline', () => {
     showNotification('Se ha perdido la conexion', 'error')
 })
-
-
-function redirectToIndex() {
-    window.location.href = "index.html";
-}

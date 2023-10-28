@@ -1,0 +1,27 @@
+/* Estilos para el cargador dentro de la notificación */
+.loader {
+  background-color: #ffffff;
+  height: 20px;
+  width: 0%;
+  transition: width 2s;
+}
+
+.notification {
+  font-weight: bold;
+  color: #ffffff;  /* Letras blancas */
+  border-radius: 8px;
+  border: 1px solid #cccccc;  /* Borde gris */
+  position: absolute;
+  top: 68px;
+  right: 53px;  /* Posición ajustada hacia la izquierda */
+  padding: 16px;
+  z-index: 1000;  /* Asegura que la notificación esté al frente de otros elementos */
+}
+
+.notification.success {
+  background-color: #35c9b0;
+}
+
+.notification.error {
+  background-color: rgb(245, 203, 203);
+}

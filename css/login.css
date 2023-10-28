@@ -21,6 +21,12 @@ body {
     font-weight: 100;  /* Un valor más bajo hace que el texto (iconos) sea más fino */
 }
 
+.bold-login {
+    font-weight: bold;
+    color: rgb(46, 138, 70);
+}
+
+
 .hover-lighten {
     cursor: pointer;  /* Cambia el cursor a una mano */
     transition: color 0.3s; /* Transición suave del color al pasar el mouse */
@@ -45,6 +51,7 @@ body {
 
 .card-body {
     padding-bottom: 40px;
+    text-align: center;
 }
 
 .custom-size {
@@ -83,4 +90,24 @@ a {
 
 .vh-77 { /* Estilo base para mover arriba la card */
     height: 77vh;
+}
+
+
+/* quitamos estilo a la flecha */
+a {
+    text-decoration: none; /* Esto quitará el subrayado */
+    color: inherit; /* Esto hará que el enlace herede el color de su elemento padre */
+}
+
+a:hover {
+    text-decoration: none; /* Esto asegurará que el subrayado tampoco aparezca al pasar el cursor por encima */
+}
+
+.custom-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.custom-link:hover {
+    text-decoration: none;
 }
