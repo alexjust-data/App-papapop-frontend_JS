@@ -7,7 +7,6 @@
     font-style: normal;
 }
 
-
 body {
     height: 100%;
     min-height: 100vh; /* Asegura que body tome al menos el alto completo de la ventana */
@@ -25,9 +24,28 @@ header {
     padding: 20px;
     padding-left: 70px;
     padding-right: 70px;
-    margin-bottom: 8px;
-    padding-bottom: 8px;
-    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.busqueda {
+    border: 1px solid gray;
+    padding: 2px 10px; /* Reducimos aún más el padding vertical */
+    border-radius: 25px;
+    font-size: 14px; /* Puedes ajustar esto según tus preferencias */
+    line-height: 1.2; /* Esto define el espacio entre líneas, ajusta según prefieras */
+    
+    /* Establece un padding izquierdo para el contenedor del fondo de la lupa */
+    padding-left: 45px; /* margen izquierda para el contenedor */
+    
+    /* Fondo de la lupa */
+    background-image: url('../icons/lupa.png');
+    background-position: -30px; /* Ajusta la posición horizontal según tus necesidades */
+    background-repeat: no-repeat;
+    background-size: 25px 25px; /* tamaño icono lupa */
+    background-origin: content-box; /* Aplicar padding al fondo */
+
+    flex-grow: 1; /* Esto permitirá que la barra de búsqueda se expanda y ocupe el espacio disponible */
+    margin-left: 20px; /* Añade un margen para separarla un poco del logo */
 }
 
 .logo {
@@ -36,10 +54,8 @@ header {
     cursor: pointer;
 }
 
-.logo a {
+a {
     display: block;
-    height: 100%;
-    width: 100%;
     text-decoration: none;
 }
 
@@ -55,6 +71,59 @@ header .iconos-header {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+
+header .boton-subir-producto {
+    background-color: #35c9b0c2; /* Verde turquesa */
+    border: none;
+    border-radius: 50px; /* Lados totalmente redondeados */
+    color: white;
+    padding: 1px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding-left: 5px;   /* Puedes ajustar este valor según cuán pegado quieras que esté el icono */
+    display: flex;       /* Esto permite que los elementos dentro del botón (el icono y el texto) se alineen horizontalmente */
+}
+
+header .boton-subir-producto img { /* Imaginando que tienes un icono + */
+    height: 20px;
+    margin-right: 5px;     /* Esto proporciona un pequeño espacio entre el icono y el texto */
+}
+
+
+button {
+    width: auto;           /* Esto permite que el botón se ajuste al contenido */
+    min-width: 150px;      /* ancho mínimo */
+    white-space: nowrap;   /* Esto previene que el texto dentro del botón salte a la siguiente línea */
+    padding-left: 5px;
+    text-align: left;      /* Alinea el contenido del botón a la izquierda */
+}
+
+button.btn.btn-success {
+    background-color: #35c9b0c2;
+    border-radius: 50px;
+    border: none;
+  }
+
+button.btn.btn-success.btn-off:hover {
+    background-color: white;
+    color: #35c9b0c2;
+}
+
+button.btn.btn-outline-secondary {
+    border-radius: 50px;
+    border-color: #35c9b0c2;
+    color: #35c9b0c2;  /* Cambiar el color del texto */
+    font-weight: 300;  /* Hacer las letras más finas */
+}
+
+button.btn.btn-outline-secondary:hover,
+button.btn.btn-outline-secondary:active {
+    background-color: #ff000052; /* Cambiar color de fondo */
+    color: white; /* Cambiar color del texto a blanco */
 }
 
 
@@ -152,18 +221,24 @@ button.btn.btn-outline-secondary:active {
 
 /* Esto se asegura de que en pantallas medianas tengamos 4 columnas por fila */
 .col-md-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-    padding: 5px;  /* Espacio alrededor de cada caja */
-    box-sizing: border-box;  /* Asegura que el padding y el borde estén incluidos en el tamaño total */
+    flex: 0 0 420px; /* ancho fijo de 420px incluyendo el padding */
+    max-width: 420px;
+    height: 270px; /* añadir altura fija */
+    padding: 5px;  
+    box-sizing: border-box;
+    position: relative; /* para asegurarse de que cualquier contenido posicionado absolutamente dentro de él se refiera a este contenedor */
 }
 
 /* Ajusta los márgenes y el padding si es necesario */
 .card {
-    margin: 0;  /* Elimina el margen ya que el padding en .col-md-3 creará el espacio */
+    margin: 0; 
     border-radius: 15px;
     cursor: pointer;
+    width: 100%; /* ocupará todo el ancho de .col-md-3 */
+    height: 100%; /* ocupará toda la altura de .col-md-3 */
+    overflow: hidden; /* para que cualquier contenido que exceda el tamaño de la tarjeta no sea visible */
 }
+
 
 .card-price {
     font-size: 1.6em; /* o el tamaño que prefieras */
@@ -176,6 +251,7 @@ button.btn.btn-outline-secondary:active {
     color:rgba(0, 0, 0, 0.356);
     font-weight: normal; /* para asegurarse de que no esté en negrita */
 }
+
 
 
 /* FOOTER */

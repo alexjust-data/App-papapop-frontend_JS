@@ -11,11 +11,12 @@ export const buildAd = (ad) => {
                 <img src=${ad.image} alt="Product Image" class="img-fluid">
               </div>
               <div class="col-md-4">
-                  <h5>${ad.title}</h5>
-                  <h5>${ad.precio} €</h5>
-                  <p class="text-muted">${ad.state}</p>
+                  <h4>${ad.title}</h4>
+                  <p class="text-muted">State : ${ad.state}</p>
+                  <h5>${ad.price} €</h5>
+                  <br>
                   <p>${ad.description}</p>
-                  <button class="btn btn-success">Buy</button>
+                  <br>
               </div>
           </div>`;
   

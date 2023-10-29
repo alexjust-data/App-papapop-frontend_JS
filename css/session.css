@@ -108,6 +108,24 @@ button.btn.btn-success {
     border: none;
   }
 
+button.btn.btn-success.btn-off:hover {
+    background-color: white;
+    color: #35c9b0c2;
+}
+
+button.btn.btn-outline-secondary {
+    border-radius: 50px;
+    border-color: #35c9b0c2;
+    color: #35c9b0c2;  /* Cambiar el color del texto */
+    font-weight: 300;  /* Hacer las letras más finas */
+}
+
+button.btn.btn-outline-secondary:hover,
+button.btn.btn-outline-secondary:active {
+    background-color: #ff3c0059; /* Cambiar color de fondo */
+    color: #2d9f87; /* Cambiar color del texto a blanco */
+}
+
 
 /* SECCION */
 .container.mt-4 {

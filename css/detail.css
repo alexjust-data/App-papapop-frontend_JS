@@ -34,16 +34,19 @@ header {
     border-radius: 25px;
     font-size: 14px; /* Puedes ajustar esto según tus preferencias */
     line-height: 1.2; /* Esto define el espacio entre líneas, ajusta según prefieras */
-
+    
     /* Establece un padding izquierdo para el contenedor del fondo de la lupa */
     padding-left: 45px; /* margen izquierda para el contenedor */
-
+    
     /* Fondo de la lupa */
     background-image: url('../icons/lupa.png');
     background-position: -30px; /* Ajusta la posición horizontal según tus necesidades */
     background-repeat: no-repeat;
     background-size: 25px 25px; /* tamaño icono lupa */
     background-origin: content-box; /* Aplicar padding al fondo */
+
+    flex-grow: 1; /* Esto permitirá que la barra de búsqueda se expanda y ocupe el espacio disponible */
+    margin-left: 20px; /* Añade un margen para separarla un poco del logo */
 }
 
 .logo {
@@ -52,10 +55,8 @@ header {
     cursor: pointer;
 }
 
-.logo a {
+a {
     display: block;
-    height: 100%;
-    width: 100%;
     text-decoration: none;
 }
 
@@ -64,7 +65,7 @@ header img {
 }
 
 .iconos-header img {
-    margin-left: 10px; /* Ajusta este valor según tu preferencia */
+    margin-left: 10px; 
 }
 
 header .iconos-header {
@@ -72,6 +73,7 @@ header .iconos-header {
     align-items: center;
     gap: 10px;
 }
+
 
 header .boton-subir-producto {
     background-color: #35c9b0c2; /* Verde turquesa */
@@ -92,12 +94,37 @@ header .boton-subir-producto img { /* Imaginando que tienes un icono + */
     margin-right: 5px;     /* Esto proporciona un pequeño espacio entre el icono y el texto */
 }
 
+
 button {
     width: auto;           /* Esto permite que el botón se ajuste al contenido */
     min-width: 150px;      /* ancho mínimo */
     white-space: nowrap;   /* Esto previene que el texto dentro del botón salte a la siguiente línea */
     padding-left: 5px;
     text-align: left;      /* Alinea el contenido del botón a la izquierda */
+}
+
+button.btn.btn-success {
+    background-color: #35c9b0c2;
+    border-radius: 50px;
+    border: none;
+  }
+
+button.btn.btn-success.btn-off:hover {
+    background-color: white;
+    color: #35c9b0c2;
+}
+
+button.btn.btn-outline-secondary {
+    border-radius: 50px;
+    border-color: #35c9b0c2;
+    color: #35c9b0c2;  /* Cambiar el color del texto */
+    font-weight: 300;  /* Hacer las letras más finas */
+}
+
+button.btn.btn-outline-secondary:hover,
+button.btn.btn-outline-secondary:active {
+    background-color: #35c9b0c2;; /* Cambiar color de fondo */
+    color: white; /* Cambiar color del texto a blanco */
 }
 
 /* SECCION */
@@ -131,6 +158,20 @@ input, textarea, select {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+
+#buy {
+    justify-self: center;
+    align-self: center;
+}
+
+.contenedor-grid {
+    display: grid;
+    place-items: center; /* Esto centra los elementos en ambos ejes, horizontal y vertical */
+    height: 0px; /* Esto toma el 100% del alto de la ventana del navegador */
+}
+
+
+
 
 /* FOOTER */
 footer {

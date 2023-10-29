@@ -1,7 +1,5 @@
 
 
-
-
 export const buildAd = (ad) => {
     return `
         <div class="col-md-3 mb-4">
@@ -11,7 +9,6 @@ export const buildAd = (ad) => {
                     <div class="card-body">
                         <p class="card-price"><strong>${ad.price} €</strong></p>
                         <h5 class="card-title">${ad.title}</h5>
-                        <p class="small-text">${ad.id}</p>
                     </div>
                 </div>
             </a>

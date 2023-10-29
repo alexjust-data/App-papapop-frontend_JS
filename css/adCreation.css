@@ -22,6 +22,11 @@ body {
     color: #808080a4; /* Un gris medio. Puedes ajustar este valor según lo claro que quieras que sea el gris. */
 }
 
+#notifications {
+    display: none;
+}
+
+
 
 header {
     position: fixed;
@@ -116,7 +121,6 @@ button.btn.btn-success {
     border: none;
   }
 
-
 #producto-form {
     position: fixed;
     top: 30px; /* Ajusta este valor para que esté a la distancia deseada del header */
@@ -132,22 +136,39 @@ button.btn.btn-success {
 .producto-upload {
     max-width: 1000px;  /* ancho máximo */
     margin: 15px 0; /* Por ejemplo, 50px arriba y abajo*/
-    margin-bottom: 150px;
+    margin-bottom: 15px;
+}
+
+.boton-contenedor {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 5px; /* Reduzco el margen superior para que esté más cerca del elemento .producto-upload */
+    margin-bottom: 0px; 
 }
 
 /* iconos */
 .iconos-centrales {
     display: flex;
-    justify-content: center;
-    align-items: center;
     
-    gap: 20px; /* Espacio entre los iconos */
-    margin: 15px 0; /* Margen superior e inferior para separar del header y la sección */
+    justify-content: center;  /* Centers children horizontally */
+    align-items: center;      /* Centers children vertically */
+    gap: 20px;                /* Space between icons */
+    margin: 15px 0;           /* Margin for top and bottom */
     background-color: white;
-    padding: 20px;
+    padding: 10px 20px;       /* Adjusted padding for top/bottom and left/right */
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    width: 350px; 
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    flex-wrap: wrap; /* Permite que los ítems se ajusten al espacio disponible */
 }
+
+}
+
 
 .iconos-centrales p {
     display: flex; /* Permite centrar el texto verticalmente con los iconos */

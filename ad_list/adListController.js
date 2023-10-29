@@ -3,11 +3,7 @@ import { getAds } from "./adListModel.js";
 import { buildAd, emptyAds } from "./adListView.js"; 
 
 
-/**Controlador principal para gestionar y mostrar la lista de anuncios (ads).
- *
- * @async
- * @param {HTMLElement} adList - Elemento del DOM donde se mostrarán los anuncios.
- */
+
 export const adListController = async (adList) => {
     adList.innerHTML = ""; 
     let ads = []; 

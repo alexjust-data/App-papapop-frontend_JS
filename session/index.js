@@ -37,4 +37,3 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('offline', () => {
     showNotification('Se ha perdido la conexion', 'error')
 })
-
