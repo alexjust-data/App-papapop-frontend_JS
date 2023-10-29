@@ -26,7 +26,6 @@ header {
     padding-left: 70px;
     padding-right: 70px;
     margin-bottom: 15px;
-    justify-content: flex-start; /* Cambiado de 'space-between' */
 }
 
 .busqueda {
@@ -35,10 +34,10 @@ header {
     border-radius: 25px;
     font-size: 14px; /* Puedes ajustar esto según tus preferencias */
     line-height: 1.2; /* Esto define el espacio entre líneas, ajusta según prefieras */
-
+    
     /* Establece un padding izquierdo para el contenedor del fondo de la lupa */
     padding-left: 45px; /* margen izquierda para el contenedor */
-
+    
     /* Fondo de la lupa */
     background-image: url('../icons/lupa.png');
     background-position: -30px; /* Ajusta la posición horizontal según tus necesidades */
@@ -56,10 +55,8 @@ header {
     cursor: pointer;
 }
 
-.logo a {
+a {
     display: block;
-    height: 100%;
-    width: 100%;
     text-decoration: none;
 }
 
@@ -77,12 +74,40 @@ header .iconos-header {
     gap: 10px;
 }
 
+header .boton-subir-producto {
+    background-color: #35c9b0c2; /* Verde turquesa */
+    border: none;
+    border-radius: 50px; /* Lados totalmente redondeados */
+    color: white;
+    padding: 1px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding-left: 5px;   /* Puedes ajustar este valor según cuán pegado quieras que esté el icono */
+    display: flex;       /* Esto permite que los elementos dentro del botón (el icono y el texto) se alineen horizontalmente */
+}
+
+header .boton-subir-producto img { /* Imaginando que tienes un icono + */
+    height: 20px;
+    margin-right: 5px;     /* Esto proporciona un pequeño espacio entre el icono y el texto */
+}
+
+
+button {
+    width: auto;           /* Esto permite que el botón se ajuste al contenido */
+    min-width: 150px;      /* ancho mínimo */
+    white-space: nowrap;   /* Esto previene que el texto dentro del botón salte a la siguiente línea */
+    padding-left: 5px;
+    text-align: left;      /* Alinea el contenido del botón a la izquierda */
+}
 
 button.btn.btn-success {
     background-color: #35c9b0c2;
     border-radius: 50px;
     border: none;
   }
+
 
 /* SECCION */
 .container.mt-4 {

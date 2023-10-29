@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Wallie-Fit';  
-    src: url('assets/fonts/Wallie-Fit.woff2') format('woff2'),  
-    url('assets/fonts/Wallie-Fit.woff') format('woff'),  
-    url('assets/fonts/Wallie-Fit.ttf') format('truetype');
+    src: url('../assets/fonts/Wallie-Fit.woff2') format('woff2'),  
+    url('../assets/fonts/Wallie-Fit.woff') format('woff'),  
+    url('../assets/fonts/Wallie-Fit.ttf') format('truetype');
     font-weight: normal; 
     font-style: normal;
 }

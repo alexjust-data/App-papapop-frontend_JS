@@ -41,7 +41,7 @@ export const notificationsController = (notifications) => {
         notifications.innerHTML = buildNotification(message, type);
         setTimeout(() => {
             notifications.innerHTML = '';
-        }, 1500);
+        }, 2000);
     }
 
     return showNotification;

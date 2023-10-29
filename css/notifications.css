@@ -12,8 +12,9 @@
   border-radius: 8px;
   border: 1px solid #cccccc;  /* Borde gris */
   position: absolute;
-  top: 68px;
-  right: 53px;  /* Posición ajustada hacia la izquierda */
+  /*top: 68px;*/
+  bottom: 50px;  /* Posición desde el borde inferior */
+  right: 50px;  /* Posición desde el borde derecho */
   padding: 16px;
   z-index: 1000;  /* Asegura que la notificación esté al frente de otros elementos */
 }
